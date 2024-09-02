@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+
+    <style>
+        body{
+            font-family: cursive;
+            text-align: center;
+        }
+
+        #counter {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Counter Application</h1>
+
+    <p id="counter">0</p>
+
+    <button id="increment" onclick="increment()">Increment (+)</button>
+    <button id="decrement" onclick="decrement()">Decrement (-)</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    
+    <script>
+
+       let count = 0;
+       document.getElementById('counter').innerText = count;
+
+        function increment() {
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById('counter').innerText = count;
+        }
+    </script>
+</body>
+</html>
